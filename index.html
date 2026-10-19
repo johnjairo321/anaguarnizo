@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proyecto académico de servicios de salud y solicitud de citas médicas.">
+  <title>Salud Integral | Centro de Atención Médica</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f3f8fa;
+      color: #263746;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #087f8c;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    header h1 {
+      font-size: 26px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .portada {
+      padding: 65px 8%;
+      text-align: center;
+      background: linear-gradient(135deg, #d8f3f0, #e6f2ff);
+    }
+
+    .portada h2 {
+      color: #087f8c;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .portada p {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 7px;
+      background: #087f8c;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .boton:hover {
+      background: #05616b;
+    }
+
+    section {
+      padding: 45px 8%;
+      scroll-margin-top: 20px;
+    }
+
+    section h2 {
+      color: #087f8c;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .introduccion {
+      max-width: 900px;
+      margin: auto;
+      text-align: justify;
+    }
+
+    .servicios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .tarjeta {
+      background: white;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px #00000012;
+      text-align: center;
+    }
+
+    .tarjeta h3 {
+      color: #087f8c;
+      margin: 10px 0;
+    }
+
+    .icono {
+      font-size: 36px;
+    }
+
+    .formulario {
+      max-width: 650px;
+      margin: auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #00000012;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 14px;
+    }
+
+    input, select, textarea {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #bdcbd2;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .formulario .boton {
+      width: 100%;
+    }
+
+    #mensaje {
+      margin-top: 15px;
+      color: #087f8c;
+      font-weight: bold;
+    }
+
+    .contacto {
+      background: #dff2f3;
+      text-align: center;
+    }
+
+    .contacto p {
+      margin: 8px 0;
+    }
+
+    .referencias {
+      background: white;
+    }
+
+    .referencias ol {
+      max-width: 950px;
+      margin: auto;
+      padding-left: 25px;
+    }
+
+    .referencias li {
+      margin-bottom: 18px;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      color: #075965;
+    }
+
+    footer {
+      background: #075965;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+
+      .portada h2 {
+        font-size: 29px;
+      }
+
+      .formulario {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>✚ Salud Integral</h1>
+
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#citas">Citas</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#referencias">Referencias</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="portada" id="inicio">
+      <h2>Tu salud es nuestra prioridad</h2>
+
+      <p>
+        Bienvenido a Salud Integral, un proyecto académico
+        dedicado a la promoción de la salud, la prevención
+        de enfermedades y la orientación sobre servicios
+        de atención médica.
+      </p>
+
+      <a href="#citas" class="boton">Solicitar una cita</a>
+    </section>
+
+    <section id="nosotros">
+      <h2>Sobre nosotros</h2>
+
+      <div class="introduccion">
+        <p>
+          Salud Integral es una propuesta de página web
+          orientada a facilitar el acceso a información
+          sobre servicios sanitarios. La atención primaria
+          de salud busca proporcionar servicios integrales
+          y promover el bienestar de las personas, las
+          familias y las comunidades (1).
+        </p>
+
+        <p>
+          Este proyecto también destaca la importancia de
+          la educación sanitaria, la prevención y el cuidado
+          responsable de la salud.
+        </p>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <h2>Nuestros servicios</h2>
+
+      <div class="servicios">
+
+        <article class="tarjeta">
+          <div class="icono">🩺</div>
+          <h3>Medicina general</h3>
+          <p>
+            Orientación para consultas generales,
+            evaluación inicial y seguimiento médico.
+          </p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono">💙</div>
+          <h3>Enfermería</h3>
+          <p>
+            Educación para la salud, orientación sobre
+            cuidados básicos y control de signos vitales.
+          </p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono">❤️</div>
+          <h3>Prevención</h3>
+          <p>
+            Información sobre hábitos saludables y
+            medidas para prevenir enfermedades.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="citas">
+      <h2>Solicitud de cita médica</h2>
+
+      <form class="formulario" id="formulario">
+
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre"
+               autocomplete="name" required>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo"
+               autocomplete="email" required>
+
+        <label for="telefono">Teléfono de contacto</label>
+        <input type="tel" id="telefono"
+               autocomplete="tel" required>
+
+        <label for="especialidad">Servicio solicitado</label>
+        <select id="especialidad" required>
+          <option value="">Selecciona un servicio</option>
+          <option>Medicina general</option>
+          <option>Enfermería</option>
+          <option>Prevención y educación sanitaria</option>
+        </select>
+
+        <label for="fecha">Fecha preferida</label>
+        <input type="date" id="fecha" required>
+
+        <label for="hora">Hora preferida</label>
+        <select id="hora" required>
+          <option value="">Selecciona un horario</option>
+          <option>08:00</option>
+          <option>09:00</option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>14:00</option>
+          <option>15:00</option>
+        </select>
+
+        <button type="submit" class="boton">
+          Enviar solicitud de demostración
+        </button>
+
+        <p id="mensaje" role="status" aria-live="polite"></p>
+      </form>
+
+      <p style="text-align:center; margin-top:18px;">
+        Formulario demostrativo: no envía datos personales
+        ni confirma citas médicas reales.
+      </p>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <h2>Información de contacto</h2>
+
+      <p><strong>Institución:</strong> Salud Integral (proyecto académico)</p>
+
+      <p>
+        <strong>Dirección:</strong>
+        Cuenca, Ecuador (dirección de ejemplo)
+      </p>
+
+      <p>
+        <strong>Teléfono:</strong>
+        <a href="tel:+593000000000">+593 00 000 0000</a>
+        (ficticio)
+      </p>
+
+      <p>
+        <strong>Correo electrónico:</strong>
+        <a href="mailto:contacto@ejemplo.com">
+          contacto@ejemplo.com
+        </a>
+        (de ejemplo)
+      </p>
+
+      <p><strong>Horario:</strong> lunes a viernes, de 08:00 a 17:00 (referencial).</p>
+    </section>
+
+    <section class="referencias" id="referencias">
+      <h2>Referencias bibliográficas</h2>
+
+      <ol>
+        <li>
+          Organización Mundial de la Salud. Atención primaria
+          de salud [Internet]. Ginebra: OMS; [citado 19 oct 2026].
+          Disponible en:
+          <a href="https://www.who.int/es/news-room/fact-sheets/detail/primary-health-care"
+             target="_blank" rel="noopener noreferrer">
+            https://www.who.int/es/news-room/fact-sheets/detail/primary-health-care
+          </a>
+        </li>
+
+        <li>
+          International Committee of Medical Journal Editors.
+          Recommendations for the Conduct, Reporting, Editing,
+          and Publication of Scholarly Work in Medical Journals
+          [Internet]. ICMJE; actualizado en enero de 2026
+          [citado 19 oct 2026]. Disponible en:
+          <a href="https://www.icmje.org/recommendations/"
+             target="_blank" rel="noopener noreferrer">
+            https://www.icmje.org/recommendations/
+          </a>
+        </li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Salud Integral</p>
+    <p>Proyecto académico del área de salud.</p>
+  </footer>
+
+  <script>
+    const formulario = document.getElementById("formulario");
+    const fecha = document.getElementById("fecha");
+    const mensaje = document.getElementById("mensaje");
+
+    function fechaActualLocal() {
+      const ahora = new Date();
+      const local = new Date(
+        ahora.getTime() - ahora.getTimezoneOffset() * 60000
+      );
+
+      return local.toISOString().slice(0, 10);
+    }
+
+    fecha.min = fechaActualLocal();
+
+    formulario.addEventListener("submit", function(evento) {
+      evento.preventDefault();
+
+      if (fecha.value < fechaActualLocal()) {
+        mensaje.textContent =
+          "Selecciona una fecha válida, igual o posterior a hoy.";
+        return;
+      }
+
+      mensaje.textContent =
+        "Esta es una demostración académica. " +
+        "La solicitud no se ha enviado y la cita no está reservada.";
+
+      formulario.reset();
+      fecha.min = fechaActualLocal();
+    });
+  </script>
+
+</body>
+</html>
